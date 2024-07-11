@@ -1,0 +1,83 @@
+\newpage\section{Eletrostática}
+O estudo de cargas estacionárias é chamado de \textbf{Eletrostática}. Uma carga estacionária no espaço consegue produzir um \textbf{campo elétrico}. Um campo pode ser definido como uma região no espaço onde em cada posição há uma característica distinta, sendo importante para compreender um fenômeno, sendo descrito com direção, sentido e módulo. 
+
+O campo elétrico pode ser demonstrada com a \textbf{Lei de Coulomb}, que diz que a força entre duas partículas aumenta quando a carga aumenta e decai com o inverso do quadrado da distância (quanto mais longe menor a força). É escrita da seguinte maneira:
+
+\begin{equation} \label{coulumb}
+    \Vec{F} = \epsilon_{0} \frac{{q_{1}}{q_{2}}}{d^2} \hat{\textbf{r}},
+\end{equation}
+\myequations{Lei de Coulumb}
+
+
+
+onde $q_{1}$ e $q_{2}$ são as cargas de teste, $d$ é a distância entre as partículas, $\hat{\textbf{r}}$ é o vetor separação e $k_{0}$ é a constante de Coulomb, sendo dada pela relação
+ 
+\begin{equation*}
+    \epsilon_{0}= \frac{1}{4 \pi \epsilon_{0}},
+\end{equation*}
+
+e tem o valor de $8.988 \times 10^9 N\times M^2 \times C^{-2}$.
+
+O principal problema que o eletromagnetismo tenta resolver é qual a força que um conjunto cargas consegue exercer sobre outras cargas e para isto existe o \textbf{princípio de superposição}. Este princípio diz que uma carga consegue exercer uma força de maneira individual sobre outra carga e que, em um cenário onde haja uma carga de teste $Q_{1}$ com ene cargas ao seu redor, a força exercida sobre a carga $Q_{1}$ será a soma da força de cada uma das cargas, como se todas as cargas fossem juntadas em uma única carga $Q$. Matematicamente temos o seguinte:
+
+\begin{equation} \label{superposicao}
+    \vec{F}_{Q \rightarrow Q_{1}} = \vec{F}_{1} + \vec{F}_{2} + \vec{F}_{3}+...+\vec{F}_{n}.
+\end{equation}
+
+Utilizando a equação \ref{coulumb} podemos escrever equação \ref{superposicao} como:
+
+\begin{equation*}
+    \vec{F}_{Q \rightarrow Q_{1}} = \vec{F}_{1} + \vec{F}_{2} + ... + \vec{F}_{n} = \epsilon_{0}\left(\frac{q_{1}Q_{1}}{r_{1}^2} + \frac{q_{2}Q_{1}}{r_{2}^2} + \frac{q_{3}Q_{1}}{r_{3}^2} + ... + \frac{q_{n}Q_{1}}{r_{n}^2}\right) 
+\end{equation*}
+\myequations{Princípio da Superposição}
+
+\begin{equation}
+    \vec{F} = Q\Vec{E},
+\end{equation}
+
+onde $\vec{E}$ é a soma dos campos de todas as cargas fontes.
+
+
+%Um campo elétrico pode ser visualizado utilizando as linhas de campo, como na figura a seguir
+
+As linhas de campo elétrico são desenhadas de tal forma que em cada ponto, a direção da linha indica a direção do campo elétrico local e a densidade das linhas está relacionada à intensidade do campo elétrico. Em outras palavras, as linhas de campo elétrico são mais densas em regiões onde o campo elétrico é mais intenso e mais esparsas onde o campo elétrico é mais fraco.
+
+As linhas de campo elétrico começam nas cargas positivas e terminam nas cargas negativas. Isso ocorre porque as cargas positivas emitem linhas de campo elétrico que se afastam delas, enquanto as cargas negativas emitem linhas de campo elétrico que se aproximam delas.
+
+As linhas de campo elétrico nunca se cruzam, o que significa que em cada ponto do espaço, apenas uma direção e intensidade do campo elétrico são válidas. Se as linhas de campo elétrico se cruzassem, isso implicaria em um ponto o campo ter dois valores.
+
+Com a ideia de linhas de campo podemos construir o conceito de fluxo de campo elétrico, que pode ser definido como \textit{a quantidade de linhas de campo que passam através de uma superfície}. Logo o fluxo é diretamente proporcional as linhas de campo e pode ser definido como
+
+\[\phi_{E} \equiv \int_{S} E \cdot d\textbf{a} .\] \myequations{Fluxo do campo elétrico}
+
+O fluxo dentro de uma superfície fechada será o indicativo da carga líquida que há em seu interior, com isso, uma carga externa não consegue interferir no fluxo de uma superfície $S$. Isso é a base da \textbf{lei de Gauss}.  O fluxo dentro de uma esfera com uma carga será
+
+
+\[\oint E \cdot d\textbf{a} = \int \frac{1}{4 \pi \epsilon_{0}} (\frac{q}{r^2}\hat{\textbf{r}})\cdot (r^2 sin \theta d\theta d\phi \hat{\textbf{r}}) = \frac{q}{\epsilon_{0}}.\] 
+O mesmo princípio de superposição utilizado no inicio serve para quando houver mais de uma carga dentro da esfera, então
+
+
+\[\oint E \cdot d\textbf{a} = \sum_{i=1}^n (\frac{q_{i}}{\epsilon_{0}}). \]
+
+O \textbf{potencial elétrico} é uma maneira simplificada de representar o campo elétrico. Toda carga elétrica gera um campo elétrico que, quando colocarmos uma carga de teste $q$ terá uma pode ser definido como
+
+
+\[ V(r) \equiv - \int_{O}^r \textbf{E} \cdot d\textbf{l}, \] \myequations{Potencial Elétrico}
+onde $O$ é um ponto de referência arbítrio. Por ser arbitrária o potencial não é uma grandeza física, já que para cada ponto de referência haverá um valor de potencial diferente, com isso o único resultado que de fato importa é a diferença de potencial entre dois pontos. Usualmente se escolhe o infinito como ponto de referência, já que ali o potencial vale zero. 
+
+A diferença entre os pontos $a$ e $b$ vai resultar no seguinte potencial.
+
+
+\[ V(r) = - \int_{a}^{b} \textbf{E} \cdot d\textbf{l}.\]
+
+Com o teorema fundamental dos gradientes temos que
+
+
+\[\int_{a}^{b} (\nabla V) \cdot d\textbf{l} = - \int_{a}^{b} \textbf{E} \cdot d\textbf{l},\]
+
+logo 
+
+
+\[E = - \nabla V\]
+significando que quando fazemos o gradiente do potencial encontramos o campo elétrico. 
+

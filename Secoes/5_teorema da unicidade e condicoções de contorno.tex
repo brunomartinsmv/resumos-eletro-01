@@ -1,0 +1,16 @@
+\newpage\section{Teorema da Unicidade}Como o objetivo é encontrar o campo elétrico, poderíamos resolver pela lei de Coulomb, mas nem sempre será fácil resolver essa integral, por mais que em alguns momentos podemos utilizar simetria facilitando a resolução. Mesmo com o potencial $\Vec{V}$ pode ser complicado resolver a integral e depois encontrar o gradiente. 
+
+Para resolver esse impasse utilizamos técnicas especiais. Utilizando equação de Poisson 
+\[\nabla ^2 V = -\frac{\rho}{\epsilon_{0}}\]
+poderíamos encontrar o campo elétrico, onde a solução dessa equação é o potencial. Utilizando algumas condições de contorno conseguiríamos resolver sem problema algum. Usando \(\rho = 0\), um local onde é um espaço vazio com cargas longes que estão criando um potencial, reduzimos a equação a 
+\[\nabla^2 V=0,\]
+ou em coordenadas cartesianas 
+\[\frac{\nabla^2 V}{\partial x^2} + \frac{\nabla^2 V}{\partial y^2} + \frac{\nabla^2 V}{\partial z^2}=0. \]
+ Para uma  dimensão a equação tem como solução 
+\[ V(x) = mx +b,\]
+mas a partir de duas dimensões, não tem mais uma única solução. Como a equação se torna uma derivada parcial, há somente uma solução geral, que para encontrar é necessário dar  condições de contorno para encontrar a solução. Condições de contorno são são especificações adicionais fornecidas para determinar uma solução única para a equação. A escolha adequada das condições de contorno é crucial para garantir que o problema tenha uma solução única e bem-definida. Se a solução for encontrada satisfazendo as condições de contorno e a equação de Laplace, logo a solução é única.  
+Um conjunto de condições de contorno forma um \textbf{teorema de unicidade}. Há dois teoremas que são mais úteis: 
+\begin{enumerate}
+    \item O primeiro diz que o potencial $V$ é determinado se for especificado na superfície de contorno, em outras palavras, se conhecemos o potencial $V$ em toda a superfície de contorno S que envolve o volume $\nu$, juntamente com a equação de Laplace sendo satisfeita dentro do volume $\nu$, então não pode haver mais de uma solução para o potencial $V$ em um volume $\nu$ que satisfaça todas essas condições.
+    \item O segundo diz em um volume V cercado por condutores e contendo uma densidade de carga especificada p, o campo elétrico é determinado univocamente se a carga total de cada condutor for dada - isto é - se todas as condições de contorno forem satisfeitas e as informações sobre a carga total de cada condutor forem fornecidas, então o campo elétrico dentro do volume V será determinado de forma única. Não haverá mais de uma solução possível para o campo elétrico nesse cenário específico.
+\end{enumerate}

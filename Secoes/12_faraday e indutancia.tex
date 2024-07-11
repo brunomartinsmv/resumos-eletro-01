@@ -1,0 +1,36 @@
+\newpage\section{Lei de Faraday-Lenz e Indutância}Faraday fez uma série de experimentos que consistia em uma espira em um campo magnético $\vec{B}$ e que:
+
+\begin{enumerate}
+    \item[(a)] ao movimentar a espira;
+    \item[(b)] movimentar o campo;
+    \item[(c)]variar o campo magnético $\vec{B}$.
+\end{enumerate}
+todos os casos levavam a geração de uma corrente induzida. Isso é algo estranho porque até o momento somente campos magnéticos que geravam corrente e, no segundo caso, a espira esta parada. Isso levou  Faraday a concluir que o que gerava a corrente era os campos elétricos.
+
+
+    %\includegraphics[scale=0.6]{induçãoeletromagnetica.jpg}
+
+
+Com isso ele propôs que
+\begin{quote}
+\begin{center}
+   \boxed{ \textit{Um campo magnético que varia induz um campo elétrico}}
+\end{center}
+\end{quote}
+
+onde matematicamente é dado pela equação
+\begin{equation} \label{eq1}
+    {\vec{\nabla} \times \vec{E} = \frac{\partial \vec{B}}{\partial t},}
+\end{equation}
+
+que é conhecida como \textbf{lei de Faraday}. Se caso o campo for constante então o rotacional do campo elétrico será zero. 
+
+A natureza gosta que o fluxo das coisas se mantenha constante, então ao haver a variação do campo magnético ela cria uma corrente que irá fluir no sentido contrario na intenção de anular a mudança no fluxo. Essa correção é conhecida como \textbf{lei de Lenz} e com a isso a equação \ref{eq1} é corrigida, ficando 
+
+\begin{equation} \label{eq2}
+    \boxed{\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t},}
+\end{equation}
+
+levando o nome de \textbf{lei de Faraday-Lenz}.
+
+Para explicar a \textbf{indutância} é possível utilizando o seguinte exemplo: temos duas espiras em repouso, se em uma passar uma corrente \(\mathbf{I}_1\) gerará um campo magnético \(\vec{B}_1\). Considerando que as linhas de campo de \(\vec{B}_1\) passarão pelo espira $2$ então um campo novo será gerado (\(\vec{B}_2\)), existe a possibilidade de $\vec{B}_1 = \vec{B}_2$ e é somente quando ambas espiras tem a mesma geometria, ou seja, mesmo formato - caso contrário serão diferentes. Se o fluxo $\Phi_1 $ variar logo o fluxo $\Phi_2$ irá variar de maneira igual. 

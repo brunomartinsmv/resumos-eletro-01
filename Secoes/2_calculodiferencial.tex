@@ -1,0 +1,72 @@
+\newpage
+\section{Cálculo Diferencial}
+A derivada ordinária de uma função $f(x) = t$ representa o quanto que aquela função variou em relação a  uma variação infinitesimal de t, como entender a velocidade de uma função. Matematicamente temos que
+\begin{equation}
+    dv = \frac{dx}{dt} .
+\end{equation}
+
+
+
+A derivada parcial é a derivada para uma função com duas ou mais variáveis. Neste caso há de se derivar a função em relação a uma das variáveis e manter as outras constantes. Então a função $z = f(x,y)=x^2 + 2y^3$ terá como derivada parcial em $x$ 
+\begin{equation}
+    \frac{\partial z}{\partial x} = 2x .
+\end{equation}
+O operador \textit{del} $\nabla$ (conhecido como Nabla) é importante para a construção do gradiente, divergente e rotacional, e é escrito da seguinte maneira para um sistema de três coordenadas: 
+
+\begin{equation}
+    \nabla \Vec{V} = \frac{\partial}{\partial x} \hat{\textbf{x}} + \frac{\partial}{\partial y} \hat{\textbf{y}}+\frac{\partial}{\partial z} \hat{\textbf{z}}.
+\end{equation}
+
+O Nabla é um operador mas tem uma flecha em cima, isso acontece porque ele é um operador vetorial, então ele sozinho não tem significado, mas ao colocar com uma função terá um significado.
+
+Em uma função com várias variáveis podemos fazer algumas operações usando as derivadas parciais. O gradiente de uma função vai mostrar como que a mesma vai funcionar quando uma das variáveis seja alterada. 
+O Gradiente de uma função que contém as derivadas parciais formando um vetor ao aplicar em um campo escalar. Então em uma função $f(x,y,z) = x^2 + 2xy^2 + 3z$, o seu gradiente será:
+
+\begin{equation}
+    \nabla F = 2x \hat{\textbf{x}} + 4y \hat{\textbf{y}} + 3 \hat{\textbf{z}} .
+\end{equation}
+
+O gradiente tem direção (onde terá a maior velocidade), magnitude (inclinação da reta naquela direção) e sentido (para onde aponta). Quando o gradiente foi igual a zero teremos um ponto crítico, ou no caso de uma montanha (exercício $1.12$ do Griffiths), o topo será quando igualarmos o gradiente a zero. 
+
+
+O divergente é um campo escalar multiplicado pelo operador \textit{del} 
+
+\begin{equation*}
+    \nabla \cdot \textbf{v} = (\hat{\textbf{x}} \frac{\partial}{\partial x} + \hat{\hat{\textbf{y}}} \frac{\partial}{\partial y} + \hat{\hat{\textbf{z}}} \frac{\partial}{\partial z}) \cdot (v_{x} {\hat{\textbf{x}}} + v_{y} {\hat{\textbf{y}}} + v_{z} {\hat{\textbf{z}}}) ,
+\end{equation*}
+
+
+\begin{equation} \label{divergente}
+    \nabla \cdot \textbf{v} = \frac{\partial v_{x}}{\partial x} + \frac{\partial v_{y}}{\partial y} + \frac{\partial v_{z}}{\partial z} ,
+\end{equation}
+\myequations{Divergente de um campo escalar}
+
+e vai indicar o quanto que o vetor vai estar divergindo do ponto em questão. 
+
+Se \ref{divergente} é igual a $0$ então não há divergência,  se \ref{divergente} for menor do que zero então o campo tende a ficar mais denso dentro do ponto em questão, caso \ref{divergente} seja positivo então há menos densidade naquele ponto do campo. Esta ideia pode ser entendida como uma torneira, onde
+
+\begin{itemize}
+    \item Torneira aberta: Divergente $ > 0$;
+    \item Torneira fechada: Divergente $= 0$.
+\end{itemize}
+
+Em um caso hipotético onde a água entre na torneira o divergente seria $< 0$. 
+
+O rotacional é uma função vetorial dado por um campo vetorial multiplicado por \textit{del}: 
+A matriz contendo as derivadas parciais em relação às coordenadas $x$, $y$ e $z$, juntamente com os versores $\hat{x}$, $\hat{y}$ e $\hat{z}$, é dada por:
+\begin{equation*}
+\nabla \times  V = 
+\begin{bmatrix}
+{\hat{\textbf{x}}} & {\hat{\textbf{y}}} & {\hat{\textbf{z}}} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+v_{x} & v_{y} & v_{z}
+
+\end{bmatrix}
+\end{equation*}
+
+\begin{equation}
+    \nabla \times  V = \hat{\textbf{x}} \left(\frac{\partial v_{z}}{\partial y} - \frac{\partial v_{y}}{\partial z }\right) + \hat{\textbf{y}} \left(\frac{\partial v_x}{\partial z } - \frac{\partial v_{z}}{\partial x}\right) + \hat{\textbf{z}} \left(\frac{\partial v_{y}}{\partial x} - \frac{\partial v_{x}}{\partial y}\right) . 
+\end{equation}
+\myequations{Rotacional de um campo vetorial}
+
+Essa função vai medir o quanto que o vetor rotaciona em relação a um ponto em discussão, impactando um vetor tridimensional próxima que irá rotacionar e assim sucessivamente. 
